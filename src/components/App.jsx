@@ -1,18 +1,28 @@
 import React from 'react';
 import "../styles/index.scss";
-import Recipies from './Recipies';
+import { BrowserRouter } from 'react-router-dom';
+import Header from "./Header";
+import Page from "./Page";
+import Footer from "./Footer";
+
 
 const App = () => {
   return ( 
-    <>
-    <section className="hero"></section>
-    <main>
-      <section>
-        <h1>Oh hi React! Hello worlssnjs</h1>
-      </section>
-      <Recipies/>
-    </main>
-    </>
+    <BrowserRouter>
+    <div className="app">
+      <div className='header'>
+        {<Header/>}
+      </div>
+      <main>
+        <div className="page">
+          {<Page/>}
+        </div>
+      </main>
+      <footer>
+        {<Footer/>}
+      </footer>
+    </div>
+    </BrowserRouter>
    );
 }
  

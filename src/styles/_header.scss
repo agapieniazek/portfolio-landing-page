@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__navigation{
+    background-color: black;
+    color:white;
+  }
+  &__img{
+    flex-grow: 1;
+    background-image: url("../images/cf8ea00ed48f397a90bf328cc6583411.jpg");
+    background-position: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;  
+  }
+}

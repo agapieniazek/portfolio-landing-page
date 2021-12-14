@@ -17,9 +17,9 @@ const plugins = [
 if(process.env.NODE_ENV === "production") {
   mode = "production";
   target = "browserslist";
-} else {
-  plugins.push(new ReactRefreshWebpackPlugin())
-}
+} else { // jeżeli w package.json zmienie na start: "SERVE=true wepack serve" to tutaj zamykam if i wstawiam drugiego 
+  plugins.push(new ReactRefreshWebpackPlugin()) //if(process.env.SERVE){ plugins push....}
+}; // gdy chce uruchomić npm run build-dev
 
 module.exports = {
   mode: mode,
