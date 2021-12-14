@@ -1,0 +1,23 @@
+nav {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.274);
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav img{
+  height: 70%;
+}
+.listElem a{
+  text-decoration: none;
+  color: black;
+  padding-left: 15px;
+  font-size: 1.5rem;
+}
