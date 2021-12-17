@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navigation from "./Navigation";
-import img1 from "../images/header.jpg";
+import $ from 'jquery';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 import img2 from "../images/hello.png";
 
+
 const Header = () => {
+  useEffect(()=>{
+    $(".about__btn").on("click", function() {
+      $("body, html").animate({
+        scrollTop: $("main").offset().top
+      }, 1200)
+    })
+  })
+
   return ( 
     <>
     {<Navigation/>}
-    <div className="header__main main">
-      <div className="header__info main__info">
+    <div className="header__main">
+      <div className="header__info">
       <img src={img2} alt="" />
       <h1>I'm Aga Pieniążek</h1>
-      <h2>nice to meet you</h2>
+      <p>nice to meet you</p>
       </div>
-      <div className="header__img main__img">
-      <img src={img1} alt="" />
+      <div className="about">
+        <div className="about__arrow">
+          <button className="about__btn">{<FontAwesomeIcon icon={faChevronCircleDown} className='about__icon'/>}</button>
+        </div>
       </div>
     </div>
     </>
