@@ -2,12 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import planet from "../images/planet.png";
 
-const navList = [
-  {name: "start", desc:"Home", path:"/", exact: true},
-  {name: "about", desc:"About me", path:"/about"},
-  {name: "toolkit", desc:"My toolkit", path:"/toolkit"},
-  {name: "contact", desc:"Contact", path:"/contact"},
-];
 const game = () => {
   const gameDesc = ["P", "L", "A", "Y", " ", "G", "A", "M", "E"];
   const desc = gameDesc.map(letter => <li key={letter} className='play__letter'>{letter}</li>)
@@ -15,14 +9,7 @@ const game = () => {
 };
 
 const Navigation = () => {
-  const menu = navList.map(item => {
-    return (
-      <li key={item.name} className="listElem menu__elem">
-        <img src={planet} className='listIcon menu__icon'/>
-        <NavLink className="menu__link" to={item.path} exact={item.exact ? item.exact : false}>{item.desc}</NavLink>
-      </li>
-    )
-  })
+
   return ( 
     <nav>
     <input type="checkbox" className="toggler" />
@@ -32,8 +19,19 @@ const Navigation = () => {
       <div className="menu__first"> 
         <div className='menu__second'>
       <ul className='menu__list'>
-       {menu}
-       <NavLink className="menu__link play" to="/game">{game}</NavLink>
+        <li className="menu__elem"><img src={planet} alt="" className="menu__icon" />
+        <NavLink className="menu__link" to="/" exact="true">Home</NavLink>
+        </li>
+        <li className="menu__elem"><img src={planet} alt="" className="menu__icon" />
+        <a href="" className="menu__link">About me</a>
+        </li>
+        <li className="menu__elem"><img src={planet} alt="" className="menu__icon" />
+        <a href="" className="menu__link">My toolkit</a>
+        </li>
+        <li className="menu__elem"><img src={planet} alt="" className="menu__icon" />
+        <a href="" className="menu__link">Contact</a>
+        </li>
+        <NavLink className="menu__link play" to="/game">{game}</NavLink>
       </ul>
       </div>
       </div>

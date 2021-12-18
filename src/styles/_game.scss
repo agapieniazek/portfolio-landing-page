@@ -1,0 +1,75 @@
+.game{
+  height: 100vh;
+  background-color: rgb(199, 161, 167);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.board{
+ display: grid;
+ grid-template-columns:repeat(3, 100px);
+ grid-template-rows: repeat(3, 100px);
+ grid-gap: 10px;
+ padding: 10px;
+ border: 2px solid black;
+ border-radius: 5px;
+}
+.board__item{
+  background-color: rgb(165, 161, 161);
+  border-radius: 5px;
+  border: 2px solid black;
+  transition: all 0.5s linear;
+  position: relative;
+}
+.board__item:hover{
+  background-color: rgb(100, 96, 96);
+}
+.reset-button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor:pointer;
+  transition: all 0.5s linear;
+}
+.reset-button:hover{
+  background-color: rgb(100, 96, 96);
+}
+
+.board__item--filled-X::after, .board__item--filled-X::before{
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: red;
+}
+.board__item--filled-X::before{
+  transform: translateY(-50%) rotate(-45deg);
+}
+.board__item--filled-X::after{
+  transform: translateY(-50%) rotate(45deg);
+}
+.board__item--filled-O::before{
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  border: 5px solid blue;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

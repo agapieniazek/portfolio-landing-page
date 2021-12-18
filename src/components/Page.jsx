@@ -1,10 +1,17 @@
 import React from 'react';
+import AboutMe from "../pages/AboutMe";
+import GamePage from "../pages/GamePage";
+import MyToolkit from "../pages/MyToolkit";
+import Contact from "../pages/Contact";
 
 const Page = () => {
   return ( 
-    <div className="page">
-    <p>Działam</p>
-    </div>
+   <>
+     {<AboutMe/>}
+     {<MyToolkit/>}
+     {<GamePage/>}
+     {<Contact/>}
+   </>
    );
 }
  

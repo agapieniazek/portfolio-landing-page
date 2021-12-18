@@ -17,7 +17,6 @@ const Header = () => {
 
   return ( 
     <>
-    {<Navigation/>}
     <div className="header__main">
       <div className="header__info">
       <img src={img2} alt="" />
