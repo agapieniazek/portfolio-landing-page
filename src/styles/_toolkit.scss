@@ -1,0 +1,85 @@
+@import "variables";
+.toolkit{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 244, 244);
+  &__info{
+    position: relative;
+    display: inline-block;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: monospace;
+    letter-spacing: 4px;
+    margin-bottom: 80px;
+    color: rgba(0, 0, 0, 0.658);
+    overflow: hidden;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(250, 244, 244);
+
+      border-left: 3px solid black;
+      animation: cursor 1s infinite linear, typing 4s steps(10, start) infinite;
+    }
+
+  }
+  &__box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__elem{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    & img{
+      width: 70%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    & h2{
+      padding: 25px;
+      font-size: 2rem;
+      font-family: monospace;
+      color: rgba(0, 0, 0, 0.685);
+      transition: all 0.5s ease;
+    }
+    &:hover{
+      & img{
+        opacity: 0.9;
+        width: 65%;
+      }
+      & h2{
+        color: black;
+      }
+    }
+
+  }
+}
+@keyframes cursor {
+  0% {
+   border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  100% {
+    left: 100%;
+  }
+}

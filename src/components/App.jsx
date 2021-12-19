@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/index.scss";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 import Navigation from './Navigation';
 import Header from "./Header";
 import Page from "./Page";
@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 const App = () => {
   return ( 
-    <BrowserRouter>
+    <Router>
     <div className="app">
       <div className='header'>
         {<Navigation/>}
@@ -22,7 +22,7 @@ const App = () => {
         {<Footer/>}
       </footer>
     </div>
-    </BrowserRouter>
+    </Router>
    );
 }
  

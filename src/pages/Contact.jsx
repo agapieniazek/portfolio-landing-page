@@ -1,8 +1,9 @@
 import React from 'react';
 const Contact = () => {
   return ( 
-    <>Kontakt
-    </>
+    <div className='contact'>
+      Kontakt
+    </div>
    );
 }
  
