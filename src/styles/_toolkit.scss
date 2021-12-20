@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(250, 244, 244);
+  background-color: rgba(250, 244, 244, 0.747);
   &__info{
     position: relative;
     display: inline-block;
@@ -14,7 +14,7 @@
     font-family: monospace;
     letter-spacing: 4px;
     margin-bottom: 80px;
-    color: rgba(0, 0, 0, 0.658);
+    color: rgba(0, 0, 0, 0.726);
     overflow: hidden;
     &::after{
       content: "";

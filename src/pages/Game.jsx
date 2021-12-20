@@ -101,6 +101,7 @@ function Game() {
 
   return (
     <div className="game">
+      <h1 className="game__title">TIC TAC TOE GAME</h1>
    <div className='table'>
      <Board>
        {squares.map((square, index) => 
@@ -112,15 +113,24 @@ function Game() {
      </div>
      <div className="result-wrapper">
      <div class="result">
+       <div className="result__message">
+         <h2>Do you know Tic Tac Toe game? </h2>
+         <p>You are player X, the computer is O. Players take turn putting their marks in empty squares.
+         The first player to get 3 of her marks in a row (up, down, across or diagonally) is the winner.
+         When all 9 squares are full, game is over with tie.</p>
+         <h4>Try to beat the computer.</h4>
+       </div>
+       <div className="result__winner">
        {!!winner && winner === "X" && (
-         <h1>WYgraleś</h1>
+         <h3>Brawo! You win!</h3>
        )}
        {!!winner && winner === "O" && (
-         <h1>Prezgrałeś</h1>
+         <h3>Unfortunately you lose... try again</h3>
        )}
        {!!winner && winner === "R" && (
-         <h1>Remis</h1>
+         <h3>TIE</h3>
        )}
+       </div>
      </div>
        <button className="btn-game" onClick={()=>resetState()}>NEW GAME</button>
        </div>
