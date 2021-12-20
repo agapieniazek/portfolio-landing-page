@@ -18,9 +18,6 @@ const App = () => {
       <main>
           {<Page/>}
       </main>
-      <footer>
-        {<Footer/>}
-      </footer>
     </div>
     </Router>
    );

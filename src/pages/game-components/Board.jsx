@@ -1,8 +1,6 @@
-
 function Board(props) {
   return (
-    <div className="board" {...props} />
-  );
+    <div class="board" {...props} />
+  )
 }
-
 export default Board;

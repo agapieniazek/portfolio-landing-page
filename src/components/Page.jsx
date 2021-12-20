@@ -1,9 +1,10 @@
 import React from 'react';
 
-import GamePage from '../pages/GamePage';
+import Game from '../pages/Game';
 import AboutMe from "../pages/AboutMe";
 import MyToolkit from "../pages/MyToolkit";
 import Contact from "../pages/Contact";
+import Footer from "./Footer";
 
 
 
@@ -12,8 +13,11 @@ const Page = () => {
     <>
     {<AboutMe/>}
     {<MyToolkit/>}
-    {<GamePage/>}
+    {<Game/>}
     {<Contact/>}
+    <footer>
+    {<Footer />}
+    </footer>
    </>
    );
 }
