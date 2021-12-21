@@ -34,8 +34,6 @@ const [info, setInfo] = useState("");
     } else {
       setInfo("Proszę uzupełnić wszystkie pola i jeszcze raz wysłać wiadomość")
     }
-
- 
   }
 
   function formValidation(){

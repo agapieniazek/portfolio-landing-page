@@ -4,6 +4,7 @@ import $ from 'jquery';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 import img2 from "../images/hello.png";
+import video from "./tlo.mp4";
 
 
 const Header = () => {
@@ -18,6 +19,9 @@ const Header = () => {
   return ( 
     <>
     <div className="header__main">
+    <video className="header__video" autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+      </video>
       <div className="header__info">
       <img src={img2} alt="" />
       <h1>I'm Aga Pieniążek</h1>

@@ -39,6 +39,9 @@
   border-radius: 8px;
   font-size: 4rem;
   text-align: center;
+  &:hover{
+    background-color: lighten(grey, 35%);
+  }
 }
 .result-wrapper{
   text-align: center;

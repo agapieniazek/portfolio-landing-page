@@ -49,6 +49,38 @@ module.exports = {
             loader: "babel-loader",
           },
         },
+        {
+    test: /\.mp4$/,
+    use: [
+        {
+            loader: "file-loader",
+            options: {
+                name: "[name].[ext]",
+                outputPath: "video"
+            }
+        }
+    ]
+},
+{
+    test: /\.html$/,
+    exclude: /node_modules/,
+    use: [
+        {
+            loader: "html-loader",
+            options: {
+                sources: {
+                    list: [
+                        {
+                            tag: "source",
+                            attribute: "src",
+                            type: "src"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
     ],
   },
 

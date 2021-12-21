@@ -122,7 +122,7 @@ function Game() {
        </div>
        <div className="result__winner">
        {!!winner && winner === "X" && (
-         <h3>Brawo! You win!</h3>
+         <h3>Hurray! You win!</h3>
        )}
        {!!winner && winner === "O" && (
          <h3>Unfortunately you lose... try again</h3>
