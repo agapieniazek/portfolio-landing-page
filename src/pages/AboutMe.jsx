@@ -11,8 +11,8 @@ const MainPage = () => {
   const polishName = "Nazywam się Aga";
   const englishName = "My name is Aga";
 
-  const polishText ="Miałam pracę, którą lubiłam, mogłam liczyć na kilku wypróbowanych przyjaciół i mieszkałam z mamą. Ale bywały chwile, kiedy czułam, że życie przecieka mi przez palce. Miałam wtedy trzydzieści trzy lata i mieszkałam w niewielkiej miejscowości w centralnej Polsce. Nie miałam męża, dzieci, ani żadnych zobowiązań, poza pracą.";
-  const englishText = "Daniel Peter, a Swiss candle-maker joined his father-in-law's chocolate business. In 1867 he began experimenting with milk as an ingredient. He brought his new product, milk chocolate, to market in 1875. He was assisted in removing the water content from the milk to prevent mildewing by a neighbor, a baby food manufacturer named Henri Nestlé.";
+  const polishText ="Ukończyłam studia ekonomiczne o kierunku finanse i rachunkowość na Uniwersytecie Ekonomicznym w Krakowie. Posiadam kilkuletnie doświadczenie jako księgowa. Dodatkowo od prawi dwóch lat rozwijam swoje hobby jakim jest programowanie aplikacji webowych, pod kątem front-endu. Szkoliłam się we własnym zakresie, moim przyjacielem w tej kwestii okazała sie platforma Udemy.";
+  const englishText = "I have graduated Cracow University of Economics with bachelor degree in finance and accounting. I have several years of experience as accountant. Additionally for almost two years I have been developing my hobby, which is building web applications, with focus on front-end. I was learning and practision on my own. On this point Udemy platform turned out to be my friend.";
 
 
   return ( 
