@@ -1,0 +1,19 @@
+footer{
+  height: 10vh;
+  background-color: black;
+}
+.footer{
+  &__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vh;
+    list-style-type: none;
+    & a{
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
+}

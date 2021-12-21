@@ -15,9 +15,9 @@ const Page = () => {
     {<MyToolkit/>}
     {<Game/>}
     {<Contact/>}
-    <footer>
+   
     {<Footer />}
-    </footer>
+   
    </>
    );
 }
