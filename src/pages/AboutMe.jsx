@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import video from "../images/videos/eye.mp4";
 import img from "../images/femine.png";
 
 const MainPage = () => {
@@ -29,7 +29,9 @@ const MainPage = () => {
       </div>
       <div className="aboutme__portret">
         <div className="aboutme__portret-container">
-      <img src={img} alt="femine"/>
+    <video className="aboutme__video" autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+      </video>
       </div>
       </div>
     </div>

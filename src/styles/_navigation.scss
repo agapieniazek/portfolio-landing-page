@@ -64,6 +64,7 @@
 }
 //togler animate
 .toggler:checked + .hamburger > div {
+  background-color:white;
   transform: rotate(135deg);
   &:before, &:after {
     top: 0;
@@ -80,7 +81,7 @@
 }
 
 .toggler:checked ~.menu >div{
-  opacity: 1;
+  opacity: 0.9;
   transition-duration: $menu-speed;
 }
 .toggler:checked ~.menu >div > div{
@@ -99,7 +100,7 @@
   align-items: center;
   justify-content: center;
   &__first{
-    background-color: $overlay-color;
+    background-color: $nav-color;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -115,13 +116,17 @@
     opacity: 0;
     transition: opacity 0.4s ease;  
   }
+  &__list {
+    border: 3px solid white;
+    padding: 5rem;
+  }
   &__link{
     color: white;
     background-color: inherit;
+    padding: 1vh 0;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight:100;
-    padding: 5%;
     font-family: $font-family;
     & a{
       text-decoration: none;
@@ -146,9 +151,9 @@
     position: relative;
     top:0;
     width:100%;
-    height: 85px;
+    height: 75px;
     display: flex;
-    background-color: $nav-color;
+    background-color: white;
 }
 .toggler {
   display: none;
@@ -159,7 +164,7 @@
 .logo {
   height: 100%;
   padding: 7px;
-  margin-left: 4%;
+  margin-left: 5%;
   transition: all 2s ease;
 }
 .logo:hover {
@@ -186,16 +191,19 @@
     display: none;
   }
   &__link{
-    color: white;
+    color: black;
+    font-weight: bold;
     background-color: inherit;
     border: none;
-    padding: 1rem;
-    font-size: 180%;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
     font-family: $font-family;
     cursor: pointer;
+ 
     & a{
       text-decoration: none;
-      color: white;
+      color: $nav-color;
     }
   }
   }
@@ -209,9 +217,8 @@
       letter-spacing: 4px;
       font-size: 1.8rem;
       text-decoration: none;
-      color: white;
+      color: $nav-color;
       font-weight: bold;
-      text-shadow: 0 0 30px white, 0 0 10px rgb(219, 236, 255);
       font-family: 'Roboto Slab', serif;
       &:nth-child(3){
           transform: rotate(20deg) translate(3px);   

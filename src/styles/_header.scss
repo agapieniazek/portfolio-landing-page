@@ -8,6 +8,7 @@
   color: black;
   overflow: hidden;
   position: fixed;
+
   top: 0;
   left: 0;
   &__video{
@@ -29,19 +30,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      & img {
-        width: 55%;
-      }
       & h1{
-        color: rgba(0, 0, 0, 0.678);
+        color: black;
         text-align: center;
         font-size: 3rem;
         letter-spacing: 2px;
       }
       & p {
-        color: darken($nav-color, 20%);
-        font-size: 1.8rem;
+        color: darken($nav-darker, 10%);
+        font-size: 2rem;
         padding: 25px 0;
         font-weight: 600;
       }
@@ -61,7 +58,7 @@
   }
   &__icon {
     font-size: 3rem;
-    color: darken($nav-color, 20%);
+    color: $nav-darker;
     cursor: pointer;
     animation-name: chevronSize;
     animation-duration: 2s;
@@ -72,13 +69,10 @@
 @media (min-width: 1000px){
   .header{
     &__info{
-      margin-top: -80px;
-      & img{
-        width: 25%;
-      }
+      margin-top: -10px;
     }
     & h1{
-      color: rgba(0, 0, 0, 0.678);
+      color: black;
       font-size: 5rem;
       letter-spacing: 2px;
     }
