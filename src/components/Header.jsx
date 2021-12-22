@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import Navigation from "./Navigation";
 import $ from 'jquery';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
-import img2 from "../images/hello.png";
 import video from "../images/videos/car.mp4";
 
 

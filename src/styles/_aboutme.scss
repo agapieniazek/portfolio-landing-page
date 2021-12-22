@@ -28,15 +28,15 @@
   }
  
   &__tekst{
+    margin-right: 10vh;
     & h1{
-      font-size: 2.3rem;
-      letter-spacing: 2px;
-      margin: 6%;
+      padding: 3vh 0;
+      font-size: 2.5rem;
+      letter-spacing: 4px;
     }
     & p {
-      margin: 6%;
-      font-size: 1.05rem;
-      text-align: center;
+      padding: 1vh 0;
+      font-size: 1rem;
     }
   }
   &__portret{
@@ -52,12 +52,12 @@
       width: 400px;
       height: 400px;
     }
-    
-    & img{
-      margin-left: 10%;
-      width: 90%;
-    }
   } 
+  &__photo{
+    border-radius: 5px;
+    margin-left: 10%;
+    width: 90%;
+  }
   &__video{
     object-fit: cover;
     width: 100%;
@@ -80,7 +80,7 @@
         margin: 0 auto;
       }
       & p{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
     }
     &__portret{
@@ -107,37 +107,47 @@
       align-items: center;
       padding: 0 auto;
       & button{
-        width: 50px;
-        height: 50px;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
         &:hover{
           background-color: darken($nav-color, 15%);
         }
       }
     }
     &__tekst{
+      width: 100%;
       & h1{
         width: 100%;
         text-align: left;
-        margin: 0;
-        padding-bottom: 50px;
       }
       & p{
         text-align: justify;
-        margin: 0;
-        margin-top: -24px;
       }
     }
     &__portret{
       margin: 2%;
       &-container{
-        width: 500px;
-        height: 400px;
-        background-size: 1600px;
+        width: 450px;
+        height: 350px;
+        position: relative;
+        top: 0;
+        left: 0;
       }
-      & img {
-        width: 100%;
-        margin-top: 10%
-      }
+    }
+    &__photo{
+      position: absolute;
+      top: -2vh;
+      left: -10vh;
+      z-index: 1;
+    }
+    &__video {
+      position: absolute;
+      top: 15vh;
+      right: -5vh;
+      z-index: 2;
+      width: 40%;
+      height: 80%;
     }
   }  
 }
