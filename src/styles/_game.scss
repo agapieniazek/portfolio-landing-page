@@ -1,5 +1,87 @@
 @import "variables";
 
+
+.game {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  &__title{
+    display: none;
+  }
+}
+.table {
+  order: 2;
+  margin: 5vh;
+  display: flex;
+}
+.board {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2px;
+}
+.square{
+  width: 90px;
+  height: 90px;
+  color: darken($nav-color, 15%);
+  border: 3px solid black;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 4rem;
+  text-align: center;
+  &:hover{
+    background-color: lighten(grey, 35%);
+  }
+}
+.result-wrapper{
+  order: 1;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result {
+  font-size: 1.7rem;
+  &__message{
+    & h2{
+      margin-bottom: 20px;
+      color: darken($add-color, 15%);
+      letter-spacing: 2px;    
+    }
+    & p{
+      font-size: 1.5rem;
+    }
+    & h4{
+      font-size: 1.7rem;
+      margin: 5px 0;
+    }
+  }
+  &__winner{
+    font-size: 2rem;
+    padding: 5vh 0;
+    color: darken($nav-color, 15%);
+  }
+}
+.btn-game{
+  cursor: pointer;
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  color: white;
+  background-color: darken($add-color, 15%);
+}
+
+@media (min-width:1000px){
 .game {
   width: 100%;
   height: 85vh;
@@ -9,6 +91,7 @@
   align-items: center;
   padding: 30px;
   &__title{
+    display: block;
     font-size: 2.8rem;
     text-align: center;
     line-height: 4.5rem;
@@ -19,6 +102,7 @@
   }
 }
 .table {
+  order: 1;
   margin: 100px;
   display: flex;
 }
@@ -44,6 +128,7 @@
   }
 }
 .result-wrapper{
+  order: 2;
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -89,4 +174,4 @@
     color: white;
     background-color: darken($nav-color, 15%);
   }
-}
+}}

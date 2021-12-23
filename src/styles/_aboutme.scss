@@ -6,11 +6,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 3vh;
   &__info{
-    width: 100%;
-    height: 50vh;
+    width: 90%;
     text-align: center;
+    margin-bottom: 5vh;
   }
   &__language{
     display: flex;
@@ -21,47 +21,47 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: $nav-color;
+      background-color: $add-color;
       border: none;
       color: white;
     }
   }
  
   &__tekst{
-    margin-right: 10vh;
+    width: 95%;
+    margin: 0 auto;
     & h1{
+      color:$nav-darker;
       padding: 3vh 0;
-      font-size: 2.5rem;
-      letter-spacing: 4px;
+      font-size: 2.1rem;
+      letter-spacing: 3px;
     }
     & p {
       padding: 1vh 0;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
   &__portret{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-bottom: 8vh;
     &-container{
-      margin: 5vh;
-      border: 2px solid $nav-darker;
-      border-radius: 5px;
-      padding: 1vh;
-      width: 400px;
-      height: 400px;
+      width: 100%;
     }
   } 
   &__photo{
+    margin-top: 2vh;
     border-radius: 5px;
-    margin-left: 10%;
+    margin-left: 10vh;
     width: 90%;
   }
   &__video{
+    margin-top: -4vh;
+    margin-left: -8vh;
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 30vh;
     border-radius: 5px;
   }
 }
@@ -91,6 +91,7 @@
 @media (min-width: 960px){
   .aboutme{
     flex-direction: row;
+    height: 60vh;
     margin: 0;
     &__info{
       width: 100%;
@@ -111,7 +112,7 @@
         width: 60px;
         height: 60px;
         &:hover{
-          background-color: darken($nav-color, 15%);
+          background-color: darken($add-color, 15%);
         }
       }
     }

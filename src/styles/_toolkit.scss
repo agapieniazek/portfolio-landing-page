@@ -1,19 +1,23 @@
 @import "variables";
+
+
 .toolkit{
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #b6ad90;
+  overflow: hidden;
+  padding-bottom: 4vh;
   &__info{
+    margin-top: 8vh;
     position: relative;
     display: inline-block;
-    font-size: 5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-family: monospace;
     letter-spacing: 4px;
-    margin-bottom: 80px;
+    margin-bottom: 8vh;
     color: rgba(0, 0, 0, 0.808);
     font-weight: 100;
     overflow: hidden;
@@ -25,7 +29,6 @@
       width: 100%;
       height: 100%;
       background-color: #b6ad90;
-
       border-left: 3px solid black;
       animation: cursor 1s infinite linear, typing 4s steps(10, start) infinite;
     }
@@ -34,6 +37,7 @@
   &__box{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
@@ -43,11 +47,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     & img{
-      width: 60%;
+      width: 20%;
       opacity: 1;
       transition: all 0.5s ease;
+    }
+    & h2{
+      padding: 15px;
+      font-size: 1.5rem;
+      font-family: monospace;
+      color: rgba(0, 0, 0, 0.801);
+    }
+  }
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+  .toolkit{
+  height: 80vh;
+  padding-bottom: 0;
+  &__info{
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    margin-top: 0;
+  }
+  &__elem{
+    & img{
+      width: 60%;
     }
     & h2{
       padding: 25px;
@@ -78,7 +108,7 @@
   100% {
     border-color: transparent;
   }
-}
+}}
 @keyframes typing {
   100% {
     left: 100%;

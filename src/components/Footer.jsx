@@ -15,7 +15,6 @@ const Footer = () => {
       <ul className='footer__list'>
         <li className="footer__icon"><a href=""><FontAwesomeIcon icon={faHome}/></a></li>
         <li className="footer__icon"><a href='https://github.com/agapieniazek?tab=repositories'><FontAwesomeIcon icon={faGithub}/></a></li>
-        <li className="footer__icon"><a href='https://www.facebook.com/agnieszka.dzieszko.1'><FontAwesomeIcon icon={faFacebookF}/></a></li>
         <li className="footer__icon"><a href='https://www.linkedin.com/in/agnieszka-pieni%C4%85%C5%BCek-501422229/'><FontAwesomeIcon icon={faLinkedinIn}/></a></li>
       </ul>
       </div>

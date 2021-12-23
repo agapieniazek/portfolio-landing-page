@@ -2,20 +2,19 @@
 
 .contact {
   width: 100%;
-  height: 80vh;
   background-color: #414833;
   color: white;
   &__wrapper{
-    width: 70%;
-    margin: 15vh auto 0;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
+    overflow: hidden;
   }
   &__info{
-    width: 50%;
     & p{
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding: 20px 0 20px 10px;
       letter-spacing: 2px;
     }
@@ -23,7 +22,7 @@
   &__title{
     font-size: 4rem ;
     font-weight: 100;
-    margin-bottom: 3vh;
+    margin: 3vh 0;
     &-color{
       color: rgb(180, 175, 175);
     }
@@ -33,12 +32,11 @@
   }
 }
 .form{
-  margin-left: 20vh;
-  margin-top: -4vh;
+  width: 90%;
+  margin: 5vh 0;
   border: 2px solid white;
   border-radius: 5px;
   padding: 4vh;
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,14 +46,14 @@
     display: block;
   }
   &__input{
+    width: 90%;
     padding: 8px 16px;
     font-family: $font-family;
-    width: 90%;
     margin: 15px 0 22px;
   }
   &__info{
     padding-bottom: 10px;
-    font-size:1.2rem;
+    font-size:1rem;
   }
   &__button{
     display: block;
@@ -71,6 +69,40 @@
     border-radius: 5px;
     transition: all 0.5s ease;
     font-weight: bold;
+  }
+}
+
+
+
+@media (min-width:1000px){
+  .contact {
+  height: 80vh;
+  &__wrapper{
+    width: 70%;
+    margin: 15vh auto 0;
+    align-items: start;
+    flex-direction: row;
+    overflow: visible;
+
+  }
+  &__info{
+    width: 50%;
+    & p{
+      font-size: 1.5rem;
+    }
+  }
+  &__title{
+    margin-bottom: 3vh;
+  }
+}
+.form{
+  margin-left: 20vh;
+  margin-top:  -4vh;
+  width: 50%;
+  &__info{
+    font-size:1.2rem;
+  }
+  &__button{
     &:hover{
       background-color: white;
       color: black;
@@ -78,4 +110,4 @@
     }
   }
 }
-
+}

@@ -72,6 +72,7 @@
   }
 }
 .toggler:checked:hover + .hamburger > div {
+  z-index: 2;
   transform: rotate(225deg);
 }
 
@@ -81,7 +82,7 @@
 }
 
 .toggler:checked ~.menu >div{
-  opacity: 0.9;
+  opacity: 1;
   transition-duration: $menu-speed;
 }
 .toggler:checked ~.menu >div > div{
